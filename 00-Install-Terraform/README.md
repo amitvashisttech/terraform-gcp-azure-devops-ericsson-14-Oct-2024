@@ -54,12 +54,12 @@ PasswordAuthentication yes
 
 ## Restart SSHD Service
 ```
-[root@terrafrom-vm ~]#service sshd restart
+service sshd restart
 ```
 
 ## Set Super / Root User Password
 ```
-[root@terrafrom-vm ~]#password
+passwd
 ```
 
 
