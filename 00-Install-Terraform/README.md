@@ -30,6 +30,19 @@ PasswordAuthentication yes
 # PAM authentication, then enable this but set PasswordAuthentication
 [root@terrafrom-vm ~]# 
 ```
+```
+[root@terrafrom-vm ~]# sed -i "s/PermitRootLogin no/PermitRootLogin yes/g" cat /etc/ssh/sshd_config
+[root@terrafrom-vm ~]# sed -i "s/#PasswordAuthentication yes/PasswordAuthentication yes/g" cat /etc/ssh/sshd_config
+```
+```
+[root@terrafrom-vm ~]# cat /etc/ssh/sshd_config | grep -E 'PermitRootLogin|PasswordAuthentication'
+PermitRootLogin yes
+PasswordAuthentication yes
+# PasswordAuthentication.  Depending on your PAM configuration,
+# the setting of "PermitRootLogin without-password".
+# PAM authentication, then enable this but set PasswordAuthentication
+[root@terrafrom-vm ~]# 
+```
 
 ## Restart SSHD Service
 ```
