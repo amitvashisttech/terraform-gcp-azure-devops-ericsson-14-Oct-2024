@@ -56,3 +56,18 @@ PasswordAuthentication yes
 #### Step5:  Open Terminal -> Clone the Repo. ( https://github.com/amitvashisttech/terraform-gcp-azure-devops-ericsson-14-Oct-2024.git )
 
 #### Step6:  Open Folder -> Select Open Folder -> terraform-gcp-azure-devops-ericsson-14-Oct-2024 -> Trust the Author. 
+
+
+# It's Time to Configure Service Account in GCP for Terraform Auth.
+
+#### Step1:  Go GCP Console -> Select IAM -> Select ServiceAccount 
+
+#### Step2:  Create a SA with Name ( terraform-sa)
+
+#### Step3:  Add Required Roles a SA such as ComputeAdmin , NetworkAdmin etc
+
+#### Step4:  Select & Create Key. 
+
+#### Step5:  Save the Key Linux Terraform instance  ( .gcp-sa-account.json )
+
+
