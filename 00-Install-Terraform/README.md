@@ -22,6 +22,9 @@ terraform --version
 
 ## Edit SSH Config & Enable Root Login:
 ```
+cat /etc/ssh/sshd_config | grep -E 'PermitRootLogin|PasswordAuthentication'
+```
+```
 [root@terrafrom-vm ~]# cat /etc/ssh/sshd_config | grep -E 'PermitRootLogin|PasswordAuthentication'
 PermitRootLogin yes
 PasswordAuthentication yes
@@ -31,8 +34,13 @@ PasswordAuthentication yes
 [root@terrafrom-vm ~]# 
 ```
 ```
-[root@terrafrom-vm ~]# sed -i "s/PermitRootLogin no/PermitRootLogin yes/g" cat /etc/ssh/sshd_config
-[root@terrafrom-vm ~]# sed -i "s/#PasswordAuthentication yes/PasswordAuthentication yes/g" cat /etc/ssh/sshd_config
+sed -i "s/PermitRootLogin no/PermitRootLogin yes/g"  /etc/ssh/sshd_config
+```
+```
+sed -i "s/#PasswordAuthentication yes/PasswordAuthentication yes/g" /etc/ssh/sshd_config
+```
+```
+cat /etc/ssh/sshd_config | grep -E 'PermitRootLogin|PasswordAuthentication'
 ```
 ```
 [root@terrafrom-vm ~]# cat /etc/ssh/sshd_config | grep -E 'PermitRootLogin|PasswordAuthentication'
