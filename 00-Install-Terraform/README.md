@@ -45,14 +45,14 @@ PasswordAuthentication yes
 
 # It's Time to Configure VsCode with Terraform instance via SSH. 
 
-### Step1:  Download & Setup VsCode 
+#### Step1:  Download & Setup VsCode 
 
-### Step2:  Go VsCode Extensions & Download SSH-Remote, HashiCorp Terraform Extensions. 
+#### Step2:  Go VsCode Extensions & Download SSH-Remote, HashiCorp Terraform Extensions. 
 
-### Step3:  Post Remote-SSH Installation -> Click on Remote Expolor Icon -> SSH -> +  ssh root@yoursshinstancepublicIP.
+#### Step3:  Post Remote-SSH Installation -> Click on Remote Expolor Icon -> SSH -> +  ssh root@yoursshinstancepublicIP.
 
-### Step4:  Re-Open the VsCode -> Click on Remote Expolor Icon -> SSH -> Click on Arror Icon in Front of your SSH Instance (->)
+#### Step4:  Re-Open the VsCode -> Click on Remote Expolor Icon -> SSH -> Click on Arror Icon in Front of your SSH Instance (->)
 
-### Step5:  Open Terminal -> Clone the Repo. ( https://github.com/amitvashisttech/terraform-gcp-azure-devops-ericsson-14-Oct-2024.git )
+#### Step5:  Open Terminal -> Clone the Repo. ( https://github.com/amitvashisttech/terraform-gcp-azure-devops-ericsson-14-Oct-2024.git )
 
-### Step6:  Open Folder -> Select Open Folder -> terraform-gcp-azure-devops-ericsson-14-Oct-2024 -> Trust the Author. 
+#### Step6:  Open Folder -> Select Open Folder -> terraform-gcp-azure-devops-ericsson-14-Oct-2024 -> Trust the Author. 
