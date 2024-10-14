@@ -74,8 +74,10 @@ passwd
 
 #### Step4:  Re-Open the VsCode -> Click on Remote Expolor Icon -> SSH -> Click on Arror Icon in Front of your SSH Instance (->)
 
-#### Step5:  Open Terminal -> Clone the Repo. ( https://github.com/amitvashisttech/terraform-gcp-azure-devops-ericsson-14-Oct-2024.git )
-
+#### Step5:  Open Terminal -> Clone the Repo. ( 
+```
+git clone https://github.com/amitvashisttech/terraform-gcp-azure-devops-ericsson-14-Oct-2024.git
+```
 #### Step6:  Open Folder -> Select Open Folder -> terraform-gcp-azure-devops-ericsson-14-Oct-2024 -> Trust the Author. 
 
 
@@ -89,6 +91,8 @@ passwd
 
 #### Step4:  Select & Create Key. 
 
-#### Step5:  Save the Key Linux Terraform instance  ( .gcp-sa-account.json )
-
+#### Step5:  Save the Key Linux Terraform instance  ( gcp-sa-account.json )
+```
+vi /root/.gcp-sa-account.json 
+```
 
