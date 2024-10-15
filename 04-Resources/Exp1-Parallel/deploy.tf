@@ -7,7 +7,7 @@ provider "google" {
 
 
 resource "google_compute_instance" "frontend" {
-  name         = "t-ci-01"
+  name         = "frontend"
   machine_type = "e2-micro"
   zone         = "us-central1-a"
 
@@ -26,7 +26,7 @@ resource "google_compute_instance" "frontend" {
 }
 
 resource "google_compute_instance" "backend" {
-  name         = "t-ci-01"
+  name         = "backend"
   machine_type = "e2-micro"
   zone         = "us-central1-a"
 
