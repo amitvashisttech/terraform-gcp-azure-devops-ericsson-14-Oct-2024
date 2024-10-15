@@ -6,8 +6,9 @@ provider "google" {
 }
 
 
-resource "google_compute_instance" "vm" {
-  name         = "t-ci-01"
+resource "google_compute_instance" "frontend" {
+  depends_on   = [google_compute_instance.backend]
+  name         = "frontend"
   machine_type = "e2-micro"
   zone         = "us-central1-a"
 
@@ -25,8 +26,8 @@ resource "google_compute_instance" "vm" {
   }
 }
 
-resource "google_compute_instance" "vm2" {
-  name         = "t-ci-02"
+resource "google_compute_instance" "backend" {
+  name         = "backend"
   machine_type = "e2-micro"
   zone         = "us-central1-a"
 
@@ -43,25 +44,3 @@ resource "google_compute_instance" "vm2" {
     }
   }
 }
-
-
-resource "google_compute_instance" "vm3" {
-  name         = "t-ci-03"
-  machine_type = "e2-micro"
-  zone         = "us-central1-a"
-
-
-  boot_disk {
-    initialize_params {
-      image = "debian-cloud/debian-12"
-    }
-  }
-
-  network_interface {
-    network = "default"
-    access_config {
-    }
-  }
-}
-
-*/
