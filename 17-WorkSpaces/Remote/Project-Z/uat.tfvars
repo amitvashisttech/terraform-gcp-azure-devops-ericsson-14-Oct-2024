@@ -1,2 +1,2 @@
 environment-name = "uat"
-instance-count = "1"
+instance-count   = "1"

@@ -1,6 +1,6 @@
 
 resource "google_compute_instance" "west_frontend" {
-  depends_on   = [ google_compute_instance.west_backend ]
+  depends_on   = [google_compute_instance.west_backend]
   name         = join("-", tolist([var.environment-name, "frontend-west"]))
   count        = var.multi-region-deployment ? 1 : 0
   zone         = var.us-west-zones[count.index]
@@ -21,7 +21,7 @@ resource "google_compute_instance" "west_frontend" {
 resource "google_compute_instance" "frontend" {
   provider     = google.myprovider2
   name         = join("-", tolist([var.environment-name, "frontend"]))
-  depends_on   = [ google_compute_instance.backend ]
+  depends_on   = [google_compute_instance.backend]
   count        = 1
   zone         = var.us-central-zones[count.index]
   machine_type = var.instance_type

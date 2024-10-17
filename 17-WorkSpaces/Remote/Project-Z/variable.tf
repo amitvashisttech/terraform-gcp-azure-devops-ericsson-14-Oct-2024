@@ -1,8 +1,8 @@
-variable "environment-name" { 
+variable "environment-name" {
   default = "default"
 }
 
 
-variable "instance-count" { 
+variable "instance-count" {
   default = "1"
 }

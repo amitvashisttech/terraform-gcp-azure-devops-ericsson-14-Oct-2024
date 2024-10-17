@@ -10,11 +10,11 @@ variable "zones" {
 
 
 resource "google_compute_instance" "frontend" {
-  count       = 2
+  count        = 2
   name         = "frontend-${count.index}"
   machine_type = "e2-micro"
   #zone         = "us-central1-a"
-  zone         = var.zones[count.index]
+  zone = var.zones[count.index]
 
 
   boot_disk {

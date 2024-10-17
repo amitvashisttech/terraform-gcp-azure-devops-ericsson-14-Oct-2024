@@ -1,6 +1,6 @@
 
 resource "google_compute_instance" "west_frontend" {
-  depends_on   = [ google_compute_instance.west_backend ]
+  depends_on   = [google_compute_instance.west_backend]
   name         = local.west_frontend_name
   count        = var.multi-region-deployment ? 1 : 0
   zone         = data.google_compute_zones.us-west1.names[count.index]
@@ -20,10 +20,10 @@ resource "google_compute_instance" "west_frontend" {
 
 resource "google_compute_instance" "frontend" {
   provider     = google.myprovider2
-  name  = local.default_frontend_name
-  depends_on   = [ google_compute_instance.backend ]
+  name         = local.default_frontend_name
+  depends_on   = [google_compute_instance.backend]
   count        = 1
-  zone     		= data.google_compute_zones.us-central1.names[count.index]
+  zone         = data.google_compute_zones.us-central1.names[count.index]
   machine_type = var.instance_type
   boot_disk {
     initialize_params {
@@ -41,7 +41,7 @@ resource "google_compute_instance" "frontend" {
 
 resource "google_compute_instance" "backend" {
   provider     = google.myprovider2
-  name  = local.default_backend_name
+  name         = local.default_backend_name
   machine_type = var.instance_type
   count        = 1
   zone         = data.google_compute_zones.us-central1.names[count.index]

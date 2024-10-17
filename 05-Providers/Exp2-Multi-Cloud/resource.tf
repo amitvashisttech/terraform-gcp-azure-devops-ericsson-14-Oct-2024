@@ -20,7 +20,7 @@ resource "google_compute_instance" "frontend" {
 
 
 
-resource "azurerm_resource_group" "rg"  {
-  name = "example-rg"
+resource "azurerm_resource_group" "rg" {
+  name     = "example-rg"
   location = "West Europe"
 }

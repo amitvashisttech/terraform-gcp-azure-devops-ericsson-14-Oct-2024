@@ -1,4 +1,4 @@
-module "instance" { 
+module "instance" {
   source = "./gcp_instance"
 }
 

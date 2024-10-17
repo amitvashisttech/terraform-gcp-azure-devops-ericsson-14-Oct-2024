@@ -25,9 +25,9 @@ resource "google_compute_instance" "backend" {
     access_config {
     }
   }
- 
- lifecycle { 
-  create_before_destroy = true 
- }
+
+  lifecycle {
+    create_before_destroy = true
+  }
 
 }

@@ -1,6 +1,6 @@
 
-module "frontend" { 
-  source = "./gcp_instance"
+module "frontend" {
+  source           = "./gcp_instance"
   environment-name = "frontend"
 }
 

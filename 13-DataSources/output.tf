@@ -4,13 +4,13 @@ output "backend_ips" {
 
 
 output "zones_west1" {
-   value = data.google_compute_zones.us-west1.names
+  value = data.google_compute_zones.us-west1.names
 }
 
 output "zones_central1" {
-   value = data.google_compute_zones.us-central1.names
+  value = data.google_compute_zones.us-central1.names
 }
 
-output "my_image"  {
-   value = data.google_compute_image.my_image
+output "my_image" {
+  value = data.google_compute_image.my_image
 }

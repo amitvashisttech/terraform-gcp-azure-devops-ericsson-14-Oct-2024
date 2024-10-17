@@ -1,2 +1,2 @@
 environment-name = "prod"
-instance-count = "2"
+instance-count   = "2"

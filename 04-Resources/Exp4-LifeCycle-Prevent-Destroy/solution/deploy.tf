@@ -24,9 +24,9 @@ resource "google_compute_instance" "backend" {
     }
   }
 
- lifecycle { 
-  prevent_destroy = "false"
- }
+  lifecycle {
+    prevent_destroy = "false"
+  }
 
 }
 

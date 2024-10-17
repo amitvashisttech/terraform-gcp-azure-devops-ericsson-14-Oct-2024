@@ -1,2 +1,2 @@
-instance_count="2"
-instance_name="prod-vm"
+instance_count = "2"
+instance_name  = "prod-vm"

@@ -4,9 +4,9 @@ output "ips" {
 
 
 output "zones_west1" {
-   value = data.google_compute_zones.zone.names
+  value = data.google_compute_zones.zone.names
 }
 
-output "my_image"  {
-   value = data.google_compute_image.my_image
+output "my_image" {
+  value = data.google_compute_image.my_image
 }

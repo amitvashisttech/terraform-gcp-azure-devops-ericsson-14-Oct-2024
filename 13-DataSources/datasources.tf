@@ -1,7 +1,7 @@
 data "google_compute_zones" "us-central1" {}
 
 data "google_compute_zones" "us-west1" {
-     provider = google.myprovider2
+  provider = google.myprovider2
 }
 
 
