@@ -50,5 +50,5 @@ variable "environment" {
 variable "additional_zones" {
   description = "Additional zones where GKE nodes will be deployed (should not include the primary zone)."
   type        = list(string)
-  default     = ["us-central1-b", "us-central1-c"]  # Adjust this as needed.
+  default     = ["us-central1-b"]  # Adjust this as needed.
 }
