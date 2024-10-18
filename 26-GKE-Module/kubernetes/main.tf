@@ -9,6 +9,9 @@ resource "google_container_cluster" "primary" {
     node_locations           = var.additional_zones 
 
     ip_allocation_policy {}
+
+    deletion_protection  =  falsels
+    
 }
 
 

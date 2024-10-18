@@ -1,0 +1,54 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  name: 'Default'
+  demands:
+  - agent.name -equals ubuntu
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+- task: TerraformInstaller@1
+  inputs:
+    terraformVersion: 'latest'
+
+- task: TerraformTaskV4@4
+  displayName: 'Terraform INIT'
+  inputs:
+    provider: 'gcp'
+    command: 'init'
+    backendServiceGCP: 'GCP-Terraform-Connect'
+    backendGCPBucketName: 'terraform-demo-ericsson-16oct2024'
+    backendGCPPrefix: 'test'
+
+- task: TerraformTaskV4@4
+  displayName: 'Terraform Validate'
+  inputs:
+    provider: 'gcp'
+    command: 'validate'
+
+- task: TerraformTaskV4@4
+  displayName: 'Terraform Plan'
+  inputs:
+    provider: 'gcp'
+    command: 'plan'
+    environmentServiceNameGCP: 'GCP-Terraform-Connect'
+
+- task: TerraformTaskV4@4
+  displayName: 'Terraform Apply'
+  inputs:
+    provider: 'gcp'
+    command: 'apply'
+    commandOptions: '--auto-approve'
+    environmentServiceNameGCP: 'GCP-Terraform-Connect'
+    
+
+
+
